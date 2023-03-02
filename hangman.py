@@ -6,7 +6,7 @@ result = ""
 won = 0
 lost = 0
 
-print('H A N G M A N')
+print("H A N G M A N")
 
 
 def game():
@@ -17,18 +17,18 @@ def game():
     while True:
 
         print()
-        print(''.join(letter_guessed))
+        print("".join(letter_guessed))
         guess = input("Input a letter: ")
         letters_used = []
 
         if len(guess) != 1:
-            print('Please, input a single letter.')
+            print("Please, input a single letter.")
 
         elif guess in used_letters and guess.islower() is True and guess.isalpha() is True:
             print("You've already guessed this letter.")
 
         elif guess.islower() is False or guess.isalpha() is False:
-            print('Please, enter a lowercase letter from the English alphabet.')
+            print("Please, enter a lowercase letter from the English alphabet.")
 
 
         elif guess in secret_word:
@@ -53,13 +53,13 @@ def game():
         used_letters.append(guess)
 
     if tries > 0:
-        print(f'You guessed the word {secret_word}!')
-        print('You survived!')
+        print(f"You guessed the word {secret_word}!")
+        print("You survived!")
         return result
 
 
 def results(won, lost):
-    return f'You won: {won} times \n'  f'You lost: {lost} times'
+    return f"You won: {won} times \n" f"You lost: {lost} times"
 
 
 while True:
